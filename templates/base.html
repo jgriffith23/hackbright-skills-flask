@@ -1,5 +1,6 @@
 <html>
     <head>
+        <!-- Template placeholder for the page title. --> 
         <title> {% block title %} 
                 AWESOME TITLE GOES HERE 
                 {% endblock %}
@@ -8,22 +9,31 @@
         <link rel="stylesheet" href="../static/styles.css"/>
     </head>
 
+    <!-- Include flash messages and any page contents in the body. -->
+
     <body>
         <div class="container">
-          <!-- Show flashed messages -->
-          {% with messages = get_flashed_messages() %}
-              {% for message in messages %}
-                  <div class="alert alert-warning">{{ message }}</div>
-              {% endfor %}
-          {% endwith %}
+          {% if get_flashed_messages() %}
+            <div class="flash-messages">
+              <!-- Show flashed messages -->
+                {% with messages = get_flashed_messages() %}
+                    {% for message in messages %}
+                        <div class="alert alert-warning">{{ message }}</div>
+                    {% endfor %}
+                {% endwith %}
+            </div>
+          {% endif %}
 
-          <!-- This is where the main content goes. -->
+          <br>
+
+          <!-- Actual page content. -->
           {% block body %}
-              BODY OF PAGE GOES HERE VIA INHERITANCE
+              BODY OF PAGE GOES HERE
           {% endblock %}
         </div>
     </body>
 
+    <!-- Add a footer containing the company name and copyright year. -->
     <hr>
     <footer>&copy; Ubermelon 2016</footer>
 

@@ -6,20 +6,28 @@ Application Response
 
 {% block body %}
 
-  <!-- Show flashed messages -->
-  {% with messages = get_flashed_messages() %}
-      {% for message in messages %}
-          <div class="alert alert-warning">{{ message }}</div>
-      {% endfor %}
-  {% endwith %}
-
 <!-- fill this in -->
-    <div class="job-application">
+    <div class="job-page-contents">
         <h1> Success! </h1>
         <p>
             Thank you, {{ first }} {{ last }}, for applying to be a 
-            {{ position }} at Ubermelon. Your minimum salary requriment is 
-            {{ salary_req }}.
+            {{ position }} at Ubermelon. We have noted your minimum salary 
+            requriment of {{ salary_req }}.
+        </p>
+        <p>
+            We receive millions of applications daily, and we do not have
+            time to respond to every applicant. Thank you for your interest,
+            but we'll be in touch if we think you'd be a good fit. Please do
+            not call us to follow up if you don't want the founder to talk
+            your ear off about melons.
+        </p>
+
+        <p>
+            Click <a href="/">here</a> to return to the main Ubermelon jobs page.
+        </p>
+
+        <p>
+            Click <a href="/application-form">here</a> to return to the job application and apply for more jobs.
         </p>
     </div>
 

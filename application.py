@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, request #redirect, session
+from flask import Flask, render_template, flash, request, redirect
 from flask_debugtoolbar import DebugToolbarExtension
 
 import jinja2
@@ -43,7 +43,8 @@ def submit_application():
     print "Desired Salary:", salary_requirement
     print "###########################\n"
 
-    flash("Your application has been submitted!")
+    flash("Your application has been submitted! Don't refresh the page.")
+
     return render_template("application-response.html",
                            first=first_name,
                            last=last_name,

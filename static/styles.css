@@ -8,10 +8,19 @@ body {
     font-size: 1em;
 }
 
+.flash-messages {
+    padding: 2em;
+    border: 1px solid #ff3377;
+    border-radius: 25px;
+    background-color: #ebfaeb;
+}
+
 /* Style the div that holds the whole application. */
 .job-page-contents {
     background-color: #ff80b3;
     padding: 7em 10em 10em 10em;
+    border-radius: 25px;
+    border: 1px solid #ff80b3;
 }
 
 /* Style the application's main heading. */
@@ -50,7 +59,7 @@ input#first-name, input#last-name, input#salary-req, input#apply {
     background-color: #ffffe6;
     font-size: 1em;
     margin: .2em;
-    width: 10em;
+    width: 13em;
 
 }
 
@@ -60,7 +69,7 @@ input#last-name {
 }
 
 input#salary-req {
-    width: 6em;
+    width: 5.5em;
 }
 
 label {
@@ -70,7 +79,7 @@ label {
 select {
     font-size: 1em;
     margin: .2em;
-    width: 11.5em;
+    width: 14.25em;
 }
 
 select > option {
