@@ -5,26 +5,27 @@ Ubermelon Jobs Home Page
 {% endblock %}
 
 {% block body %}
+    <div class="job-page-contents">
+        <h1>So you want to join the Ubermelon team?</h1>
+        <p>That's awesome! Here are the positions we're hiring for.</p>
 
-<div class="job-page-contents">
-    <h1>So you want to join the Ubermelon team?</h1>
-    <p>That's awesome! Here are the positions we're hiring for.</p>
-
-    <!-- Show a list of all jobs currently open at Ubermelon. -->
-    <div class="informative-text-box" id="job-list">
-        <h3> Our Melon-tastic Career Opportunities </h3>
-        <ul>
-            <li><b>Software Engineer:</b> Help us build the melon delivery app of the future! Must know Python, HTML, CSS, SQL, Flask, Jinja, and be familiar with Open Melon Data, a cool set of JSON-formatted data on every melon in existence. Stock options and a free melon a week are part of the package!</li>
-            <br>
-            <li><b>QA Engineer:</b> Do you like to test all the things to make sure they act the way they're supposed to? Well, specifically, do you like clicking lots of buttons? We need someone to try literally every button in our UI and submit bug reports to our engineering team as needed. You'll get a free melon every week!</li>
-            <br>
-            <li><b>Product Manager:</b> Can you translate high-level concepts into something a developer can implement? Our founder, Mel, has all kinds of crazy ideas, and as a Product Manager, your task will be to explain what he wants to our engineers so they can make Mel's dreams a reality. You'll get free melons, too!</li>
-        </ul>
+        <!-- Show a list of all jobs currently open at Ubermelon. -->
+        <div class="informative-text-box" id="job-list">
+            <h3> Our Melon-tastic Career Opportunities </h3>
+            <ul>
+                {% for job in joblist %}
+                <!-- Right now, job[1] = title and job[2] = description. At
+                     some point, Flask code for this route should be refactored to
+                     pass these to Jinja in a way that allows us to avoid accessing
+                     by index in the HTML page. -->
+                <li><b>{{ job[1] }}:</b> {{ job[2] }}</li>
+                <br>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <p>
+            Think you see your calling in that list? <a href="/application-form">Head to our application!</a>
+        </p>
     </div>
-    
-    <p>
-        Think you see your calling in that list? <a href="/application-form">Head to our application!</a>
-    </p>
-</div>
-
 {% endblock %}

@@ -37,9 +37,12 @@ def read_jobs_from_file(filepath):
         print "****"
 
         if title in positions_to_post:
-            print "OMG IM IN THE IF"
-            print "{} already in the list of jobs to be posted.".format(
-                  title)
+            print "--------------------------------------------"
+            print "ALERT: "
+            print "{} already in the list of jobs to be posted.".format(title)
+            print "Not adding job with id {} to site.".format(unique_id)
+            print "Check job database for duplicate postings."
+            print "--------------------------------------------"
             continue
 
         else:
@@ -55,5 +58,34 @@ def read_jobs_from_file(filepath):
 
     return jobs
 
+
+def get_all_jobs():
+    """Get all jobs from database."""
+
+    return jobs_to_post.values()
+
+def get_job_info_in_lists():
+    """Gives job attributes as a list of lists, so the display order
+    can be controlled.
+
+    Should give a list of the format [[unique_id, title, description], ...]
+    """
+
+    # First, get all the job objects available at this time.
+    all_jobs = get_all_jobs()
+
+    # Create an empty list to store our lists of job attributes.
+    job_info_in_lists = []
+
+    # Iterate over the job objects.
+    for job in all_jobs:
+
+        # Add this job's info to the master list.
+        job_info_in_lists.append([job.unique_id, job.title, job.description])
+
+    # Sort the list of job attributes before return, so that they appear in
+    # order by ID. This should keep postings in order by ID on the site.
+    return sorted(job_info_in_lists)
+
+# Used for get_all_jobs().
 jobs_to_post = read_jobs_from_file("jobs.txt")
-print "POST THESE: ", jobs_to_post
