@@ -1,13 +1,85 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
-    <title>Skills-Web</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>Skills-HTML-CSS</title>
+    <link rel="stylesheet" href="../static/styles.css" />
 </head>
-<body>
+<body> -->
 
-<!-- This page needs a form that can capture data about the user's
-first name, last name, job title, and salary requirements. -->
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- your html goes here -->
+    <div class="job-application">
+        <h1>Welcome to Ubermelon's Job Application!</h1>
+        <p>
+            We're so pleased you've decided to apply to join the Ubermelon team.
+            Our mission is to sell as many melons as possible to as many people
+            as possible in as many countries as possible. We're taking over the
+            melon-eating world with our delicous, mostly-decent-quality melons,
+            and we look forward to hearing how you can further our plans for 
+            global dominance! 
+        </p>
+
+        <p>
+            We receive millions of applications daily, and we do not have
+            time to respond to every applicant. Thank you for your interest,
+            but we'll be in touch if we think you'd be a good fit. Please do
+            not call us to follow up if you don't want the founder to talk
+            your ear off about melons.
+        </p>
+
+        <div class="informative-text-box" id="instructions">
+            <h3> Application Instructions </h3>
+            <p>
+                Please fill in your first name, last name, salary requirement,
+                and the position you're applying for. Then, just click "Apply!" to
+                send us your application.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="job-application-form">
+        <!-- A form to take the user's information for the job application.-->
+            <form action="/application" method="POST">
+
+                <!-- Ask for the user's first/last names. -->
+                <label for="first-name">First Name:</label> 
+                <input id="first-name" type="text" name="firstname">
+                <br>
+
+                <label for="last-name">Last Name:</label>
+                <input id="last-name" type="text" name="lastname">
+                <br>
+
+                <!-- Ask for the user's salary requirement, as a number. -->
+                <label for="salary-req">Salary Requirement:</label>
+                <input id="salary-req" type="number" name="salaryreq">
+                <br>
+
+                <!-- Ask which job the user is applying for. -->
+                <label for="desired-position">Position:</label>
+                <select id="desired-position" name="position">
+                    <option>Software Engineer</option>
+                    <option>QA Engineer</option>
+                    <option>Product Manager</option>
+                </select>
+                <br>
+                <br>
+
+                <!-- Submit button! Make sure to use a POST request since
+                     this affects the company database. --> 
+                <input type="submit" id="apply" value="Apply Now!">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!--     <hr>
+    <footer>&copy; Ubermelon 2016</footer>
 
 </body>
-</html>
+</html> -->

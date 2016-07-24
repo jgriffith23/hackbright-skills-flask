@@ -1,1 +1,92 @@
-/* Your styles can go here. */
+/* Your CSS goes here */
+
+/* Apply global font family, color background. */
+body {
+    margin: 0 2em 0 2em;
+    background-color: #194d19;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+/* Style the div that holds the whole application. */
+.job-application {
+    background-color: #ff80b3;
+    padding: 7em 10em 10em 10em;
+}
+
+/* Style the application's main heading. */
+.job-application > h1 {
+    font-family: "Arial Black";
+    text-shadow: .05em .05em #ffffff;
+
+}
+
+/* Prettify the instruction box div, generally. */
+.informative-text-box {
+    border: 5px solid #ff3377;
+    background-color:  #ffccdd;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Style heading and paragraph text, specifically. */
+.informative-text-box > h3 {
+    font-family: "Arial Black";
+    text-shadow: .1em .1em #ffffff;
+}
+
+.informative-text-box > p {
+    font-style: italic;
+}
+
+/* Make three specific input text light yellow, without making all 
+   input text boxes light yellow. Do all three in one go, along with
+   submit buttons. */
+input#first-name, input#last-name, input#salary-req, input#apply {
+    background-color: #ffffe6;
+    font-size: 1em;
+    margin: .2em;
+    width: 10em;
+
+}
+
+/* Make the last name field text bold. */
+input#last-name {
+    font-weight: bold;
+}
+
+input#salary-req {
+    width: 6em;
+}
+
+label {
+    font-size: 1em;
+}
+
+select {
+    font-size: 1em;
+    margin: .2em;
+    width: 11.5em;
+}
+
+select > option {
+    font-size: 1em;
+}
+
+input[type="submit"]{
+    font-family: "Arial Black";
+    padding: .5em;
+    margin-top: 2em;
+    text-shadow: .1em .1em #ffffff;
+}
+
+hr {
+    margin-top: 2em;
+}
+
+footer {
+    padding: .5em 0 2em 0;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}

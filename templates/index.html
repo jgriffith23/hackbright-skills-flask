@@ -1,11 +1,34 @@
-<!doctype html>
+<!-- <!doctype html>
 <html>
 <head>
-    <title>Sample Home Page</title>
+    <title>Ubermelon Jobs Home Page</title>
 </head>
-<body>
+<body> -->
 
-<h1>This is the sample home page.</h1>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+Ubermelon Jobs Home Page
+{% endblock %}
+
+{% block body %}
+
+<div class="page-contents">
+    <h1>Want to join our team?</h1>
+    <p>
+    We're so pleased you've decided to apply to join the Ubermelon team.
+    Our mission is to sell as many melons as possible to as many people
+    as possible in as many countries as possible. We're taking over the
+    melon-eating world with our delicous, mostly-decent-quality melons,
+    and we look forward to hearing how you can further our plans for 
+    global dominance! 
+    </p>
+    <p>
+    <a href="/application-form">See our melon-tastic career opportunities!</a>
+    </p>
+</div>
+
+{% endblock %}
+
+<!-- </body>
+</html> -->

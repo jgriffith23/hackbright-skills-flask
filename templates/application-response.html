@@ -1,11 +1,26 @@
-<!doctype html>
-<html>
-<head>
-    <title>Application Response</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+Application Response
+{% endblock %}
+
+{% block body %}
+
+  <!-- Show flashed messages -->
+  {% with messages = get_flashed_messages() %}
+      {% for message in messages %}
+          <div class="alert alert-warning">{{ message }}</div>
+      {% endfor %}
+  {% endwith %}
 
 <!-- fill this in -->
+    <div class="job-application">
+        <h1> Success! </h1>
+        <p>
+            Thank you, {{ first }} {{ last }}, for applying to be a 
+            {{ position }} at Ubermelon. Your minimum salary requriment is 
+            {{ salary_req }}.
+        </p>
+    </div>
 
-</body>
-</html>
+{% endblock %}
