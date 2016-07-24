@@ -38,7 +38,7 @@ body {
     text-align: center;
 }
 
-/* Style heading and paragraph text, specifically. */
+/* Style heading and paragraph text from info boxes, specifically. */
 .informative-text-box > h3 {
     font-family: "Arial Black";
     text-shadow: .1em .1em #ffffff;
@@ -68,6 +68,7 @@ input#last-name {
     font-weight: bold;
 }
 
+/* Adjust widths of form fields so they roughly line up. */
 input#salary-req {
     width: 5em;
 }
@@ -82,16 +83,20 @@ select {
     width: 14.25em;
 }
 
+/* Set font size for options in dropdowns. */
 select > option {
     font-size: 1em;
 }
 
+/* Style the submit button. */
 input[type="submit"]{
     font-family: "Arial Black";
     padding: .5em;
     margin-top: 2em;
     text-shadow: .1em .1em #ffffff;
 }
+
+/* Prettify the rule and footer. */
 
 hr {
     margin-top: 2em;
