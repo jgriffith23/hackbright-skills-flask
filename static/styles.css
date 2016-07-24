@@ -9,13 +9,13 @@ body {
 }
 
 /* Style the div that holds the whole application. */
-.job-application {
+.job-page-contents {
     background-color: #ff80b3;
     padding: 7em 10em 10em 10em;
 }
 
 /* Style the application's main heading. */
-.job-application > h1 {
+.job-page-contents > h1 {
     font-family: "Arial Black";
     text-shadow: .05em .05em #ffffff;
 
@@ -37,6 +37,10 @@ body {
 
 .informative-text-box > p {
     font-style: italic;
+}
+
+.informative-text-box > ul {
+    text-align: left;
 }
 
 /* Make three specific input text light yellow, without making all 
@@ -87,6 +91,6 @@ hr {
 footer {
     padding: .5em 0 2em 0;
     color: white;
-    font-style: italic;
+    font-family: "Arial Black";
     font-weight: bold;
 }

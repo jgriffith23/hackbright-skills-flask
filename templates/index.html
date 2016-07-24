@@ -1,10 +1,3 @@
-<!-- <!doctype html>
-<html>
-<head>
-    <title>Ubermelon Jobs Home Page</title>
-</head>
-<body> -->
-
 {% extends 'base.html' %}
 
 {% block title %}
@@ -13,22 +6,24 @@ Ubermelon Jobs Home Page
 
 {% block body %}
 
-<div class="page-contents">
-    <h1>Want to join our team?</h1>
+<div class="job-page-contents">
+    <h1>So you want to join the Ubermelon team?</h1>
+    <p>That's awesome! Here are the positions we're hiring for.</p>
+
+    <div class="informative-text-box" id="job-list">
+        <h3> Our Melon-tastic Career Opportunities </h3>
+        <ul>
+            <li><b>Software Engineer:</b> Help us build the melon delivery app of the future! Must know Python, HTML, CSS, SQL, Flask, Jinja, and be familiar with Open Melon Data, a cool set of JSON-formatted data on every melon in existence. Stock options and a free melon a week are part of the package!</li>
+            <br>
+            <li><b>QA Engineer:</b> Do you like to test all the things to make sure they act the way they're supposed to? Well, specifically, do you like clicking lots of buttons? We need someone to try literally every button in our UI and submit bug reports to our engineering team as needed. You'll get a free melon every week!</li>
+            <br>
+            <li><b>Product Manager:</b> Can you translate high-level concepts into something a developer can implement? Our founder, Mel, has all kinds of crazy ideas, and as a Product Manager, your task will be to explain what he wants to our engineers so they can make Mel's dreams a reality. You'll get free melons, too!</li>
+        </ul>
+    </div>
+    
     <p>
-    We're so pleased you've decided to apply to join the Ubermelon team.
-    Our mission is to sell as many melons as possible to as many people
-    as possible in as many countries as possible. We're taking over the
-    melon-eating world with our delicous, mostly-decent-quality melons,
-    and we look forward to hearing how you can further our plans for 
-    global dominance! 
-    </p>
-    <p>
-    <a href="/application-form">See our melon-tastic career opportunities!</a>
+        Think you see your calling in that list? <a href="/application-form">Head to our application!</a>
     </p>
 </div>
 
 {% endblock %}
-
-<!-- </body>
-</html> -->
