@@ -32,10 +32,8 @@ def read_jobs_from_file(filepath):
 
         # Unpack the fields from the file into three variables
         (unique_id, title, description) = line.strip().split("|")
-        print "****"
-        print title
-        print "****"
 
+        # TODO: Pipe this alert message into a log file.
         if title in positions_to_post:
             print "--------------------------------------------"
             print "ALERT: "
