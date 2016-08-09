@@ -10,11 +10,11 @@
     </head>
 
     <!-- Include flash messages and any page contents in the body. -->
-
     <body>
         <div class="container">
           {% if get_flashed_messages() %}
             <div class="flash-messages">
+
               <!-- Show flashed messages -->
                 {% with messages = get_flashed_messages() %}
                     {% for message in messages %}
@@ -33,8 +33,8 @@
         </div>
     </body>
 
-    <!-- Add a footer containing the company name and copyright year. -->
+    <!-- Add a footer containing the copyright year. -->
     <hr>
-    <footer>&copy; Ubermelon 2016</footer>
+    <footer>&copy; Awesome Site 2016</footer>
 
 </html>
